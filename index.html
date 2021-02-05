@@ -21,30 +21,66 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hello World;</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="index.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/index.js"></script>
+
+	<link rel="stylesheet" href="css/full-page-scroll.css">
+	<script src="js/full-page-scroll.js"></script>
+
 </head>
 <body>
-	
-		<div class="header">
-		<font id="randomAccent_Hello_1">Hello</font> <font id="randomAccent_World_1">World</font>;<br>
-		<font id="randomAccent_Hello_2">Hello</font> <font id="randomAccent_World_2">World</font>;<br>
-		<font id="randomAccent_Hello_3">Hello</font> <font id="randomAccent_World_3">World</font>;<br>
-		<font id="randomAccent_Hello_4">Hello</font> <font id="randomAccent_World_4">World</font>;<br>
-		<br>
-		<font style="font-size: 0.6rem;">By: Pakin P.</font>
-		<br><br><hr style="width:30vw;text-align:left;margin-left:0"><br><br>
+<div id="main" class="scroll-container">
+	<section class="section1">
+			<div class="content center">
+				<hr style="width:30vw;text-align:left;margin-left:0"><br><br>
+				<font id="randomAccent_Hello_1">Hello</font> <font id="randomAccent_World_1">World</font>;<br>
+				<font id="randomAccent_Hello_2">Hello</font> <font id="randomAccent_World_2">World</font>;<br>
+				<font id="randomAccent_Hello_3">Hello</font> <font id="randomAccent_World_3">World</font>;<br>
+				<font id="randomAccent_Hello_4">Hello</font> <font id="randomAccent_World_4">World</font>;<br>
+				<br>
+				<font style="font-size: 0.6rem;">By: Pakin P.</font>
+				<br><br><hr style="width:30vw;text-align:left;margin-left:0">
+			</div>
+	</section>
 
+	<section class="section2">
+		<div class="page second">
+			<div class="content center box" >
+				<img src="assets/byte2020tran.png" height="250px">
+				
+				<div class="text">
+					<div style="display: flex;align-items: center;"><div class="vl"></div><h1>BIO:</h1></div>
+					<div class="break"></div>
+					<p><font style="font-weight:550;">Name</font> : Pakin Puttanukulchai</p>
+					<p><font style="font-weight:550;">Birthdate</font> : 31/08/2002</p><br>
+					<p><font style="font-weight:550;">Education</font> : Suankularb Wittaylai School - 2015-2020</p>
+				</div>
+			</div>
 		</div>
-	<div class="content">
+	</section>
 
-		<h3>Past Project:</h3><br>
-		<button onclick="location.href='#'" class="link">Note;</button><br>
-		<button onclick="location.href='#'" class="link">Laon;</button><br>
-		<button onclick="location.href='#'" class="link">Samarnmitr'63;</button><br>
+	<section class="section3">
+		<div class="page third">
+			<div class="content center">
 
-	</div>
+				<h3>Past Project:</h3><br>
+				<button onclick="location.href='#'" class="link">Note;</button><br>
+				<button onclick="location.href='#'" class="link">Laon;</button><br>
+				<button onclick="location.href='#'" class="link">Samarnmitr'63;</button><br>
 
+			</div>
+		</div>
+	</section>
+</div>
 
+<script>
+	new fullScroll({
+    mainElement: "main",
+    displayDots: true,
+    dotsPosition: "right",
+    animateTime: 0.7,
+    animateFunction: "ease",
+  });
+</script>
 </body>
 </html>
