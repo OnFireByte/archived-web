@@ -69,6 +69,11 @@ body {
   color: #27e8a7;
 }
 
+a {
+  text-decoration: none;
+  color: #27e8a7;
+}
+
 .link {
   text-decoration: none;
   color: #27e8a7;
@@ -78,8 +83,10 @@ body {
           transition-timing-function: ease-in-out;
   will-change: transform;
   padding: 7px;
+  width: auto;
+  display: inline-block;
   font-size: 1rem;
-  border: 0;
+  border-radius: 2px;
   background-color: Transparent;
   overflow: hidden;
   position: relative;
