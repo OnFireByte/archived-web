@@ -2,6 +2,11 @@
   font-size: 25px;
 }
 
+@font-face {
+  font-family: Fira Code;
+  src: url(fonts/FiraCode-Medium.ttf);
+}
+
 * {
   font-family: Fira Code;
   margin: 0;
@@ -40,8 +45,8 @@ body {
 
 .header font {
   margin: 2px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .accentFont {

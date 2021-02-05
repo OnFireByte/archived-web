@@ -5,6 +5,10 @@ $accent-color-dark: #32ae85;
 :root{
     font-size: 25px;
 }
+@font-face {
+    font-family: Fira Code;
+    src: url(fonts/FiraCode-Medium.ttf);
+  }
 *{
     font-family: Fira Code;
     margin: 0;
