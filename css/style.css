@@ -42,8 +42,7 @@ body {
 
 .content {
   text-align: center;
-  position: absolute;
-  padding: 20px;
+  position: relative;
   left: 50%;
   top: 50%;
   position: relative;
@@ -164,6 +163,10 @@ section {
   height: 0;
 }
 
+.logo {
+  width: 250px;
+}
+
 @media only screen and (max-width: 800px) {
   .box {
     display: -webkit-box;
@@ -172,7 +175,7 @@ section {
             align-items: center;
     background-color: white;
     border-radius: 10px;
-    padding: 50px;
+    padding: 1rem;
     width: 100vw;
     overflow: auto;
     width: auto;
@@ -181,9 +184,18 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .logo {
+    width: 70vw;
+  }
   .text {
     font-size: 0.6rem;
     width: 60vw;
+  }
+  .section1 {
+    font-size: 6vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
