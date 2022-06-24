@@ -2,120 +2,19 @@
 <html lang="en">
 
 <head>
-	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
-	<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-	<link rel="manifest" href="favicon/manifest.json" />
-	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
-	<meta name="theme-color" content="#ffffff" />
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="content-type" content="text/html; charset=" UTF-8″ />
-	<meta name="Description" content="A Static Website By Pakin Puttanukulchai, Host on Github.io" />
-	<meta name="keywords" content="Pakin Puttanukulchai,Pakin,Puttanukulchai" />
-	<meta http-equiv="content-language" content="en" />
-	<meta name="revisit-after" content="7 days" />
-	<meta name="robots" content="index" />
-	<meta http-equiv="cache-control" content="max-age=31556926" />
-	<title>Hello World;</title>
-	<link rel="stylesheet" href="css/style.min.css" />
-	<link rel="preload" href="fonts/firacode-medium-webfont.woff" as="font" type="font/woff" crossorigin>
-	<link rel="preload" href="fonts/firacode-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
-	<script src="js/index.min.js"></script>
-
-	<link rel="stylesheet" href="css/full-page-scroll.min.css" />
-	<script src="js/full-page-scroll.min.js"></script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>Vite App</title>
 </head>
 
-<body>
-	<div id="main" class="scroll-container">
-		<section class="section1">
-			<div class="content center">
-				<hr />
-				<br /><br />
-				<span id="randomAccent_Hello_1">Hello</span>
-				<span id="randomAccent_World_1">World</span>;<br />
-				<span id="randomAccent_Hello_2">Hello</span>
-				<span id="randomAccent_World_2">World</span>;<br />
-				<span id="randomAccent_Hello_3">Hello</span>
-				<span id="randomAccent_World_3">World</span>;<br />
-				<span id="randomAccent_Hello_4">Hello</span>
-				<span id="randomAccent_World_4">World</span>;<br />
-				<br />
-				<div class="by">By: Pakin P.</div>
-				<br /><br />
-				<hr />
-			</div>
-		</section>
-
-		<section class="section2">
-			<div class="page second">
-				<div class="content center box">
-					<img src="assets/pakintran.png" class="logo" alt="Logo" />
-
-					<div class="text">
-						<span class="bio_head">
-							<div class="vl"></div>
-							<h1>BIO:</h1>
-						</span>
-						<div class="break"></div>
-						<p>
-							<span class="topic">Name</span> : Pakin
-							Puttanukulchai
-						</p>
-						<div class="break"></div>
-						<p>
-							<span class="topic">Birthdate</span> : 31/08/2002
-						</p>
-						<div class="break"></div>
-						<p>
-							<span class="topic">Education</span> : <br>
-							• Suankularb Wittaylai School<br>
-							• Faculty of Engineering - Chulalongkorn University
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="section3">
-			<div class="page third">
-				<div class="content center">
-					<span class="header">Past Project:</span>
-					<br /> <br />
-					<button class="link archived">Note;</button><br />
-					<button class="link archived">Laon;</button><br />
-					<button class="link archived">
-						Samarnmitr'63;</button><br />
-					<button onclick="location.href='osk139m609/'" class="link">
-						React-OSK139M609;</button><br />
-					<button onclick="location.href='covidTH/'" class="link">
-						covidTH;</button>
-				</div>
-			</div>
-		</section>
-	</div>
-
-	<script>
-		new fullScroll({
-			mainElement: "main",
-			displayDots: true,
-			dotsPosition: "right",
-			animateTime: 0.7,
-			animateFunction: "ease",
-		});
-	</script>
+<body class="bg-slate-800">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
