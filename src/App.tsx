@@ -1,6 +1,7 @@
 import { Sidebar } from "@/components/Sidebar";
 import { useState } from "react";
 import About from "@/pages/About";
+import Works from "./pages/Works";
 import Home from "@/pages/Home";
 
 export enum Pages {
@@ -16,6 +17,9 @@ function App() {
         switch (page) {
             case Pages.about:
                 return <About />;
+
+            case Pages.works:
+                return <Works />;
 
             default:
                 return <Home />;

@@ -5,3 +5,16 @@
 :root {
     font-family: "space mono", monospace;
 }
+
+@layer base {
+    h1 {
+        @apply text-2xl font-bold;
+    }
+    h2 {
+        @apply text-xl font-bold mt-3;
+    }
+
+    a {
+        @apply text-blue-300 hover:text-blue-700;
+    }
+}
