@@ -6,7 +6,7 @@ const Works = () => {
     const [workFile, setWorkFile] = useState("m609osk139.md");
 
     const workList = [
-        { title: "m609osk139", file: "m609osk139.md" },
+        { title: "m609 osk139", file: "m609osk139.md" },
         { title: "Covid stat website", file: "covidWeb.md" },
         { title: "Covid Stat Discord Bot", file: "covidBot.md" },
         { title: "Simple Tier List", file: "tierList.md" },
@@ -26,21 +26,21 @@ const Works = () => {
     }, [workFile]);
 
     return (
-        <div className="flex gap-5 w-full h-[45rem]">
+        <div className="flex flex-col md:flex-row gap-5 w-full h-[45rem]">
             <Block
                 title="Works"
-                className="w-96 h-full border-yellow-500"
+                className="md:w-80 md:h-full border-yellow-500 shrink-0"
                 titleClassName="text-yellow-500"
                 center
                 titleCenter
             >
-                <div className="flex flex-col gap-3 w-full">
+                <div className="flex md:flex-col gap-3 w-full overflow-scroll scrollbar-hide">
                     {workList.map((w) => (
                         <button
                             onClick={() => {
                                 setWorkFile(w.file);
                             }}
-                            className="w-full"
+                            className="md:w-full text-sm md:text-base"
                             style={{
                                 backgroundColor:
                                     workFile === w.file ? "rgb(234 179 8)" : "transparent",
@@ -50,7 +50,11 @@ const Works = () => {
                             {w.title}
                         </button>
                     ))}
-                    <a href="https://github.com/OnFireByte?tab=repositories" target="_blank">
+                    <a
+                        href="https://github.com/OnFireByte?tab=repositories"
+                        target="_blank"
+                        className="grid place-items-center"
+                    >
                         <button>and more...</button>
                     </a>
                 </div>
