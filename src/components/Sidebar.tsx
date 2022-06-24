@@ -1,6 +1,12 @@
 import Block from "@/components/Block";
 import { Pages } from "@/App";
-export function Sidebar({ setPage }: { setPage: React.Dispatch<React.SetStateAction<Pages>> }) {
+export function Sidebar({
+    setPage,
+    page: curPage,
+}: {
+    setPage: React.Dispatch<React.SetStateAction<Pages>>;
+    page: Pages;
+}) {
     const pages = [Pages.home, Pages.about, Pages.works];
 
     function capitalize(str: string) {
@@ -15,8 +21,13 @@ export function Sidebar({ setPage }: { setPage: React.Dispatch<React.SetStateAct
                             onClick={() => {
                                 setPage(p);
                             }}
+                            style={{
+                                backgroundColor: curPage === p ? "rgb(248 250 252)" : "transparent",
+                                color: curPage === p ? "rgb(30 41 59)" : "rgb(248 250 252)",
+                                fontWeight: curPage === p ? "bold" : "normal",
+                            }}
                         >
-                            {capitalize(p)}
+                            {capitalize(p.valueOf())}
                         </button>
                     ))}
                 </div>

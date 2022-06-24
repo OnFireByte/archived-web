@@ -3,24 +3,27 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import "@/md.css";
 const Works = () => {
-    const [workName, setWorkName] = useState("s");
+    const [workFile, setWorkFile] = useState("m609osk139.md");
 
     const workList = [
         { title: "m609osk139", file: "m609osk139.md" },
         { title: "Covid stat website", file: "covidWeb.md" },
+        { title: "Covid Stat Discord Bot", file: "covidBot.md" },
+        { title: "Simple Tier List", file: "tierList.md" },
+        { title: "Snip Websocket Addon", file: "snip.md" },
     ];
     const [md, setMd] = useState("test");
 
     useEffect(() => {
         const fetcher = async () => {
-            const raw = await fetch("md/m609osk139.md");
+            const raw = await fetch(`md/${workFile}`);
             const text = await raw.text();
             console.log(text);
 
             setMd(text);
         };
         fetcher();
-    }, []);
+    }, [workFile]);
 
     return (
         <div className="flex gap-5 w-full h-[45rem]">
@@ -31,21 +34,38 @@ const Works = () => {
                 center
                 titleCenter
             >
-                <div className="flex flex-col gap-3">
-                    <button>m609osk139</button>
-                    <button>Covid Stat Website</button>
-                    <button>Covid Stat Discord Bot</button>
-                    <button>Simple Tier List</button>
-                    <button>Snip Websocket Addon</button>
+                <div className="flex flex-col gap-3 w-full">
+                    {workList.map((w) => (
+                        <button
+                            onClick={() => {
+                                setWorkFile(w.file);
+                            }}
+                            className="w-full"
+                            style={{
+                                backgroundColor:
+                                    workFile === w.file ? "rgb(234 179 8)" : "transparent",
+                                color: workFile === w.file ? "rgb(30 41 59)" : "rgb(248 250 252)",
+                            }}
+                        >
+                            {w.title}
+                        </button>
+                    ))}
+                    <a href="https://github.com/OnFireByte?tab=repositories" target="_blank">
+                        <button>and more...</button>
+                    </a>
                 </div>
             </Block>
-            {workName != "" && (
+            {workFile != "" && (
                 <Block
                     title="Work's Info"
                     titleClassName="text-yellow-500"
                     className="w-full border-yellow-500"
                 >
-                    <ReactMarkdown children={md} />
+                    {md != "" ? (
+                        <ReactMarkdown children={md} linkTarget="_blank" />
+                    ) : (
+                        <div>Nothing to show here right now...</div>
+                    )}
                 </Block>
             )}
         </div>

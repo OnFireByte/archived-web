@@ -29,7 +29,7 @@ function App() {
     return (
         <div className="grid h-screen place-items-center">
             <div className="w-screen flex flex-col h-fit md:flex-row gap-5 p-5">
-                <Sidebar setPage={setPage} />
+                <Sidebar setPage={setPage} page={page} />
                 <ShowPage />
             </div>
         </div>
