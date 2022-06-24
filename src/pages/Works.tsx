@@ -1,7 +1,6 @@
 import Block from "@/components/Block";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import "@/md.css";
 const Works = () => {
     const [workFile, setWorkFile] = useState("m609osk139.md");
 
@@ -18,7 +17,6 @@ const Works = () => {
         const fetcher = async () => {
             const raw = await fetch(`md/${workFile}`);
             const text = await raw.text();
-            console.log(text);
 
             setMd(text);
         };
