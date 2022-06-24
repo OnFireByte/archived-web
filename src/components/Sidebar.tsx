@@ -21,6 +21,7 @@ export function Sidebar({
                             onClick={() => {
                                 setPage(p);
                             }}
+                            key={p.valueOf()}
                             style={{
                                 backgroundColor: curPage === p ? "rgb(248 250 252)" : "transparent",
                                 color: curPage === p ? "rgb(30 41 59)" : "rgb(248 250 252)",
