@@ -5,6 +5,7 @@ type Props = React.PropsWithChildren & {
     titleCenter?: boolean;
     center?: boolean;
     verticalCenter?: boolean;
+    titleClassName?: string;
 };
 
 const Block = ({
@@ -15,6 +16,7 @@ const Block = ({
     verticalCenter,
     titleCenter,
     insideClassName,
+    titleClassName,
 }: Props) => (
     <div
         className={`${className} flex border-[1px] box-border border-slate-50 rounded-lg p-5 text-slate-50 relative`}
@@ -22,7 +24,9 @@ const Block = ({
             justifyContent: titleCenter ? "center" : "normal",
         }}
     >
-        <div className=" absolute top-[-0.8rem] bg-slate-800 px-1 text-bold">{title}</div>
+        <div className={`${titleClassName} absolute top-[-0.8rem] bg-slate-800 px-1 text-bold`}>
+            {title}
+        </div>
         <div
             className={`${insideClassName} w-full`}
             style={{

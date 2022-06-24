@@ -1,13 +1,12 @@
-import { Sidebar } from "./components/Sidebar";
+import { Sidebar } from "@/components/Sidebar";
 import { useState } from "react";
-import Block from "@/components/Block";
-import Profile from "@/pages/Profile";
-import Home from "./pages/Home";
+import About from "@/pages/About";
+import Home from "@/pages/Home";
 
 export enum Pages {
-    home,
-    profile,
-    works,
+    home = "home",
+    about = "about",
+    works = "works",
 }
 
 function App() {
@@ -15,8 +14,8 @@ function App() {
 
     const ShowPage = () => {
         switch (page) {
-            case Pages.profile:
-                return <Profile />;
+            case Pages.about:
+                return <About />;
 
             default:
                 return <Home />;

@@ -1,28 +1,38 @@
 import Block from "@/components/Block";
 import { Pages } from "@/App";
 export function Sidebar({ setPage }: { setPage: React.Dispatch<React.SetStateAction<Pages>> }) {
+    const pages = [Pages.home, Pages.about, Pages.works];
+
+    function capitalize(str: string) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
     return (
-        <div className="lg:w-56 flex flex-col flex-grow">
+        <div className="lg:w-56 flex flex-col">
             <Block title="Navigation" className="grow" titleCenter>
-                <button
-                    onClick={() => {
-                        setPage(Pages.home);
-                    }}
-                >
-                    Home
-                </button>
-                <br />
-                <button
-                    onClick={() => {
-                        setPage(Pages.profile);
-                    }}
-                >
-                    Profile
-                </button>
+                <div className="flex flex-col justify-items-start">
+                    {pages.map((p) => (
+                        <button
+                            onClick={() => {
+                                setPage(p);
+                            }}
+                        >
+                            {capitalize(p)}
+                        </button>
+                    ))}
+                </div>
             </Block>
-            <Block title="Contract" className="mt-5 grow">
-                <div className="text-[0.8rem]">bright.pakin@hotmail.com</div>
-                <a href="">Github</a>
+            <Block title="Contract" className="mt-5 grow" insideClassName="flex flex-col">
+                {/* <div className="text-[1rem]">
+                    bright.pakin
+                    <br />
+                    @hotmail.com
+                </div> */}
+                <a href="http://github.com/onfirebyte" target="_blank">
+                    <p>Github</p>
+                </a>
+                <a href="https://www.facebook.com/0nfirebyte/" target="_blank">
+                    <p>Facebook</p>
+                </a>
             </Block>
         </div>
     );

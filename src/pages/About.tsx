@@ -1,14 +1,19 @@
 import Block from "@/components/Block";
 
-const Profile = () => {
+const About = () => {
     const calcAge = (dateString: string) => {
         var birthday = +new Date(dateString);
         return ~~((Date.now() - birthday) / 31557600000);
     };
 
     return (
-        <Block title="Profile" className="w-full">
-            <div className="grid place-items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:grid-rows-2 gap-5">
+        <Block
+            title="About"
+            className="w-full md:h-[45rem]"
+            insideClassName="flex-col overflow-scroll scrollbar-hide"
+            verticalCenter
+        >
+            <div className="grid place-items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:grid-rows-2 my-3 gap-5">
                 <img
                     className="w-52 md:row-span-2 col-span-2 md:col-span-1"
                     src="https://avatars.githubusercontent.com/u/65996113"
@@ -47,14 +52,15 @@ const Profile = () => {
                     31-08-2002 ({calcAge("2002-08-31")} Y/O)
                 </Block>
             </div>
-            <Block title="About Me" className="mt-5">
+            {/* <Block title="About Me" className="mt-5"> */}
+            <div className="w-[80%]">
                 Hi 👋, I'm Pakin, a 19-near-20 years old college student, you can call me
                 Byte/Bright! I'm interested in web development in general both Front-End and
                 Back-End. I'm considered myself beginner in world of programming 👶
-                <br />
-                <div>
-                    <h2 className="my-2 ">Tech that i&#39;m confident about:</h2>
-                    <div className="flex gap-2">
+            </div>
+            <div>
+                <Block title="Tech that i&#39;m confident about" className="mt-5">
+                    <div className="flex gap-2 flex-wrap">
                         <img
                             className="inline-block"
                             src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E"
@@ -71,8 +77,10 @@ const Profile = () => {
                             alt="TailwindCSS"
                         />
                     </div>
-                    <h2 className="my-2">Tech that I&#39;m using and learning:</h2>
-                    <div className="flex gap-2">
+                </Block>
+
+                <Block title="Tech that I&#39;m using and learning" className="mt-5 mb-1">
+                    <div className="flex gap-2 flex-wrap">
                         <img
                             className="inline-block"
                             src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB"
@@ -119,9 +127,11 @@ const Profile = () => {
                             alt="Linux"
                         />
                     </div>
-                    <em>(So technically web development in general)</em>
-                    <br />
-                    <h2 className="my-2">Thing that I&#39;m interested in / want to learn :</h2>
+                </Block>
+
+                <em>(So technically web development in general)</em>
+                <br />
+                <Block title="Thing that I&#39;m interested in / want to learn" className="mt-5">
                     <ul className="list-disc px-6">
                         <li>
                             <h3 id="database-and-api">Database and API</h3>
@@ -141,10 +151,11 @@ const Profile = () => {
                         <li>BaaS (AWS/Firebase)</li>
                         <li>Networking</li>
                     </ul>
-                </div>
-            </Block>
+                </Block>
+            </div>
+            {/* </Block> */}
         </Block>
     );
 };
 
-export default Profile;
+export default About;
