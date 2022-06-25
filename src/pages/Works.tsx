@@ -51,9 +51,13 @@ const Works = () => {
                     <a
                         href="https://github.com/OnFireByte?tab=repositories"
                         target="_blank"
-                        className="grid place-items-center"
+                        className="grid place-items-center break-normal"
                     >
-                        <button>and more...</button>
+                        <button>
+                            and more
+                            <wbr />
+                            ...
+                        </button>
                     </a>
                 </div>
             </Block>
@@ -64,7 +68,22 @@ const Works = () => {
                     className="w-full border-yellow-500"
                 >
                     {md != "" ? (
-                        <ReactMarkdown children={md} linkTarget="_blank" />
+                        <ReactMarkdown
+                            children={md}
+                            linkTarget="_blank"
+                            components={{
+                                img: ({ node, ...props }) => (
+                                    <img
+                                        style={{
+                                            maxHeight: "450px",
+                                            marginLeft: "auto",
+                                            marginRight: "auto",
+                                        }}
+                                        {...props}
+                                    />
+                                ),
+                            }}
+                        />
                     ) : (
                         <div>Nothing to show here right now...</div>
                     )}
