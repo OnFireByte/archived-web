@@ -1,3 +1,4 @@
+import Contract from "@/components/Contract";
 import Block from "@/components/Block";
 import { Pages } from "@/App";
 export function Sidebar({
@@ -33,19 +34,7 @@ export function Sidebar({
                     ))}
                 </div>
             </Block>
-            <Block title="Contract" className="mt-5 grow" insideClassName="flex flex-col">
-                {/* <div className="text-[1rem]">
-                    bright.pakin
-                    <br />
-                    @hotmail.com
-                </div> */}
-                <a href="http://github.com/onfirebyte" target="_blank">
-                    <p>Github</p>
-                </a>
-                <a href="https://www.facebook.com/0nfirebyte/" target="_blank">
-                    <p>Facebook</p>
-                </a>
-            </Block>
+            <Contract className="hidden md:block"/>
         </div>
     );
 }

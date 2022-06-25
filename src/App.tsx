@@ -3,6 +3,7 @@ import { useState } from "react";
 import About from "@/pages/About";
 import Works from "./pages/Works";
 import Home from "@/pages/Home";
+import Contract from "./components/Contract";
 
 export enum Pages {
     home = "home",
@@ -31,6 +32,7 @@ function App() {
             <div className="w-screen flex flex-col h-fit md:flex-row gap-5 p-5">
                 <Sidebar setPage={setPage} page={page} />
                 <ShowPage />
+                <Contract className="md:hidden block" />
             </div>
         </div>
     );
