@@ -6,7 +6,7 @@ type Props = React.PropsWithChildren & {
 };
 const Contract = ({ className }: Props) => {
     return (
-        <Block title="Contract" className={`${className} mt-5 grow`}>
+        <Block title="Contract" className={`${className} md:mt-5 grow`}>
             <div className="flex flex-col gap-1 md:gap-3 h-full">
                 <a href="http://github.com/onfirebyte" target="_blank">
                     <div>Github</div>

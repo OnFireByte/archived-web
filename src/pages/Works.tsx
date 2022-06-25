@@ -24,7 +24,7 @@ const Works = () => {
     }, [workFile]);
 
     return (
-        <div className="flex flex-col md:flex-row gap-5 w-full h-[45rem]">
+        <div className="flex flex-col md:flex-row gap-5 w-full md:h-[45rem]">
             <Block
                 title="Works"
                 className="md:w-80 md:h-full border-yellow-500 shrink-0"
