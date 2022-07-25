@@ -39,7 +39,7 @@ const About = () => {
                         {"1 > Suankularb Wittayalai School\n"}
                         <br />
                         <br />
-                        {"2 > Chulalongkorn university\n"}
+                        {"2 > Computer Engineering degrees at Chulalongkorn university\n"}
                     </div>
                 </Block>
                 <Block
